@@ -1,0 +1,52 @@
+<div class="container-fluid ">
+            <div >
+                <h1>
+                    Learn, Cook, Eat Your Food
+                </h1>
+            </div>
+            <!-- <button 
+            class="btn rounded-pill"
+            (click)="getCatMeals('')"
+           >
+            All
+            </button> -->
+            @for (m of meal; track m.idCategory) {
+                <button
+            type="button"
+            class="btn rounded-pill"
+            (click)="getCatMeals(m.strCategory)"
+         >
+            {{m.strCategory}}
+         </button>
+            } 
+     <hr class="w-100">
+            <div class="conatiner ">
+                <div class="row">
+                    @for (m of catMeal; track m.idMeal) {
+                        <div class="col-md-3">
+                            .<div class="card">
+                                <div class="div-img">
+                                    <img class="card-img-top" [src]="m.strMealThumb" alt="Title" />
+                                </div>
+                                
+                                <div class="card-body">
+                                    <h4 class="card-title">{{m.strMeal}}</h4>
+                                    <p class="card-text"></p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    }
+                   
+                </div>
+
+               
+            </div>
+            <app-footer></app-footer>
+           
+        </div>
+        
+
+   
+    
+

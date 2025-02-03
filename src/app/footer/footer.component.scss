@@ -1,0 +1,14 @@
+$font-stack :"Pacifico", cursive ;
+.container-fluid{
+    text-align: center;
+    background-color: white;
+    padding-top: 50px;
+    margin-top: 200px;
+   p{
+    font-family:$font-stack;
+   }
+   h2{
+    font-family:$font-stack;
+   }
+
+}
